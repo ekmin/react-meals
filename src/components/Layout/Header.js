@@ -11,7 +11,7 @@ const Header = props => {
                 <button>Cart</button>
             </header>
             <div className={styles["main-image"]}>
-                <img src={mealsImage} alt="Meals Image" />
+                <img src={mealsImage} alt="A table full of delicious foods" />
             </div>
         </Fragment>
     )
