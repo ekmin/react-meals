@@ -16,7 +16,7 @@ const AvailableMeals = () => {
       );
 
       if (!response.ok) {
-        throw new Error("Something went wrong")
+        throw new Error("Something went wrong");
       }
 
       const responseData = await response.json();
@@ -36,10 +36,10 @@ const AvailableMeals = () => {
       setIsLoading(false);
     };
 
-      fetchMeals().catch(error => {
-        setIsLoading(false);
-        setHttpError(error.message)
-      }); 
+    fetchMeals().catch((error) => {
+      setIsLoading(false);
+      setHttpError(error.message);
+    });
   }, []);
 
   if (isLoading) {
@@ -47,7 +47,7 @@ const AvailableMeals = () => {
       <section className={styles.MealsLoading}>
         <p>Loading...</p>
       </section>
-    )
+    );
   }
 
   if (httpError) {
@@ -55,7 +55,7 @@ const AvailableMeals = () => {
       <section className={styles.MealsError}>
         <p>{httpError}</p>
       </section>
-    )
+    );
   }
 
   const mealsList = meals.map((meal) => (
